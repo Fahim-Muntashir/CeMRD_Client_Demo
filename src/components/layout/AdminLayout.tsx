@@ -1,7 +1,12 @@
+import React from "react";
+
+import { Outlet } from "react-router-dom";
+import AddBlog from "../../pages/Admin/AddBlog";
+
 const AdminLayout = () => {
     return (
-        <div className="min-h-screen bg-gray-100">
-            <div className="sidebar min-h-screen w-[3.35rem] overflow-hidden border-r hover:w-56 hover:bg-white hover:shadow-lg">
+        <div className="min-h-screen flex bg-gray-900">
+            <div className="sidebar min-h-screen w-[170px] md:w-[4.00rem] lg:w-[3.40rem] overflow-hidden border-r md:hover:w-64 hover:bg-white hover:shadow-lg">
                 <div className="flex h-screen flex-col justify-between pt-2 pb-6">
                     <div>
                         <div className="w-max p-2.5">
@@ -65,6 +70,10 @@ const AdminLayout = () => {
                         </a>
                     </div>
                 </div>
+            </div>
+            <div>
+                <Outlet></Outlet>
+                <AddBlog></AddBlog>
             </div>
         </div>
     );
