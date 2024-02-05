@@ -3,6 +3,7 @@ import AdminLayout from "../components/layout/AdminLayout";
 import React from "react";
 import App from "../App";
 import AddBlog from "../pages/Admin/AddBlog";
+import AddNews from "../pages/Admin/AddNews";
 
 const router = createBrowserRouter([
     {
@@ -10,13 +11,16 @@ const router = createBrowserRouter([
         element: <App></App>,
     },
     {
-        path: '/admin',
+        path: '/dashboard',
         element: <AdminLayout />,
         children: [
             {
                 path: "addblog",
                 element: <AddBlog />,
-            },
+            }, {
+                path: 'addnews',
+                element: <AddNews></AddNews>
+            }
         ],
     },
 
