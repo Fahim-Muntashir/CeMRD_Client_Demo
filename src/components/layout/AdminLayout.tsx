@@ -1,8 +1,9 @@
 import React from "react";
-
+import { MdNaturePeople } from "react-icons/md";
 import { Link, Outlet } from "react-router-dom";
-import AddBlog from "../../pages/Admin/AddBlog";
+import { RiCalendarEventFill } from "react-icons/ri";
 import { FaBlogger } from "react-icons/fa";
+import { GiArchiveResearch } from "react-icons/gi";
 const AdminLayout = () => {
     return (
         <div className="min-h-screen flex bg-white-900">
@@ -33,6 +34,15 @@ const AdminLayout = () => {
                                 </Link>
                             </li>
                             <li className="min-w-max">
+                                <Link to="/dashboard/addresearch" className="bg group flex items-center space-x-4 rounded-full px-4 py-3 text-gray-600">
+
+
+                                    <GiArchiveResearch />
+
+                                    <span className="group-hover:text-gray-700">Add Research</span>
+                                </Link>
+                            </li>
+                            <li className="min-w-max">
                                 <Link to="/dashboard/addnews" className="group flex items-center space-x-4 rounded-md px-4 py-3 text-gray-600">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                         <path className="fill-current text-gray-600 group-hover:text-cyan-600" fill-rule="evenodd" d="M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z" clip-rule="evenodd" />
@@ -42,23 +52,20 @@ const AdminLayout = () => {
                                 </Link>
                             </li>
                             <li className="min-w-max">
-                                <a href="#" className="group flex items-center space-x-4 rounded-md px-4 py-3 text-gray-600">
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                        <path className="fill-current text-gray-600 group-hover:text-cyan-600" d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z" />
-                                        <path className="fill-current text-gray-300 group-hover:text-cyan-300" d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z" />
-                                    </svg>
-                                    <span className="group-hover:text-gray-700">Other data</span>
-                                </a>
+                                <Link to="/dashboard/addadviser" className="group flex items-center space-x-4 rounded-md px-4 py-3 text-gray-600">
+
+                                    <MdNaturePeople className="group-hover:text-cyan-300" />
+
+                                    <span className="group-hover:text-gray-700">Add Adviser</span>
+                                </Link>
                             </li>
                             <li className="min-w-max">
-                                <a href="#" className="group flex items-center space-x-4 rounded-md px-4 py-3 text-gray-600">
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                        <path className="fill-current text-gray-300 group-hover:text-cyan-300" d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z" />
-                                        <path className="fill-current text-gray-600 group-hover:text-cyan-600" fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd" />
-                                    </svg>
-                                    <span className="group-hover:text-gray-700">Finance</span>
-                                </a>
+                                <Link to="/dashboard/addevent" className="group flex items-center space-x-4 rounded-md px-4 py-3 text-gray-600">
+                                    <RiCalendarEventFill className="group-hover:text-cyan-300" />
+                                    <span className="group-hover:text-gray-700">Add Event</span>
+                                </Link>
                             </li>
+                            <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
                         </ul>
                     </div>
                     <div className="w-max -mb-3">
