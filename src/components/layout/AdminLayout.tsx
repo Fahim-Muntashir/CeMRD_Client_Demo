@@ -5,8 +5,8 @@ import AddBlog from "../../pages/Admin/AddBlog";
 
 const AdminLayout = () => {
     return (
-        <div className="min-h-screen flex bg-gray-900">
-            <div className="sidebar min-h-screen w-[170px] md:w-[4.00rem] lg:w-[3.40rem] overflow-hidden border-r md:hover:w-64 hover:bg-white hover:shadow-lg">
+        <div className="min-h-screen flex bg-white-900">
+            <div className="sidebar min-h-screen w-[140px] md:w-[64px] overflow-hidden border-r md:hover:w-80 lg:w-64 lg:hover:w-64 hover:bg-white hover:shadow-lg">
                 <div className="flex h-screen flex-col justify-between pt-2 pb-6">
                     <div>
                         <div className="w-max p-2.5">
@@ -73,7 +73,6 @@ const AdminLayout = () => {
             </div>
             <div>
                 <Outlet></Outlet>
-                <AddBlog></AddBlog>
             </div>
         </div>
     );

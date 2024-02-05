@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import Swal from "sweetalert2";
 
@@ -44,10 +45,10 @@ const AddBlog = () => {
 
     return (
         <div>
-            <section className="py-1 bg-blueGray-50 text-white">
+            <section className="py-1 bg-blueGray-50">
                 <div className="w-full lg:w-8/12 px-4 mx-auto mt-6">
-                    <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg shadow-cyan-500/50 rounded-lg bg-blueGray-100 border-0">
-                        <div className="rounded-t text-white mb-0 px-6 py-6">
+                    <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-100 border-0">
+                        <div className="rounded-t bg-white mb-0 px-6 py-6">
                             <div className="text-center flex justify-between">
                                 <h6 className="text-blueGray-700 text-xl font-bold">
                                     Add Blog
@@ -70,9 +71,7 @@ const AddBlog = () => {
                                             </label>
                                             <input
                                                 type="text"
-                                                className="border-0 px-3 py-3 
-                                                text-black
-                                                placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                                                className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                                                 name="title"
                                                 value={title}
                                                 required
@@ -90,7 +89,7 @@ const AddBlog = () => {
                                             </label>
                                             <input
                                                 type="text"
-                                                className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 text-black bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                                                className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                                                 name="subtitle"
                                                 value={subtitle}
                                                 required
@@ -109,7 +108,7 @@ const AddBlog = () => {
                                             <input
                                                 type="text"
                                                 value={img1Link}
-                                                className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 text-black bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                                                className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                                                 name="img1Link"
                                                 required
                                                 onChange={(e) => setImg1Link(e.target.value)}
@@ -126,7 +125,7 @@ const AddBlog = () => {
                                             </label>
                                             <textarea
                                                 value={description1}
-                                                className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-black text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                                                className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                                                 name="description1"
                                                 required
                                                 onChange={(e) => setDescription1(e.target.value)}
@@ -143,7 +142,7 @@ const AddBlog = () => {
                                             </label>
                                             <textarea
                                                 value={description2}
-                                                className="border-0 px-3 py-3 text-black placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                                                className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                                                 name="description2"
                                                 required
                                                 onChange={(e) => setDescription2(e.target.value)}
@@ -152,7 +151,7 @@ const AddBlog = () => {
                                     </div>
                                 </div>
                                 <input
-                                    className="bg-blue-400 text-white active:bg-pink-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none cursor-pointer mr-1 ease-linear transition-all duration-150"
+                                    className="bg-blue-500 text-white active:bg-blue-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none cursor-pointer mr-1 ease-linear transition-all duration-150"
                                     type="submit"
                                     value="Add Blog"
                                 />
