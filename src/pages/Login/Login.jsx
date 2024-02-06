@@ -1,15 +1,11 @@
-import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
 import toast from "react-hot-toast";
-import Logo from "../../../public/Images/logo.png";
-
-import { useRouter } from "next/navigation";
 import useAuth from "../../hooks/useAuth";
+import { Link, useNavigate } from "react-router-dom";
 
-const page = () => {
+const Login = () => {
   const { signIn, googleLogin } = useAuth();
-  const router = useRouter();
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const handleLogin = async () => {
@@ -20,7 +16,7 @@ const page = () => {
       toast.dismiss(toastId);
       toast.success("Successfully Sign In!");
       if (user) {
-        router.push("/", { scroll: false });
+        navigate("/", { scroll: false });
       }
     } catch (error) {
       console.log(error);
@@ -35,7 +31,7 @@ const page = () => {
       toast.dismiss(toastId);
       toast.success("Successfully Sign In!");
       if (user) {
-        router.push("/", { scroll: false });
+        navigate("/", { scroll: false });
       }
     } catch (error) {
       console.log(error);
@@ -61,8 +57,12 @@ const page = () => {
         >
           <div class="w-full h-100">
             <div>
-              <Link href="/">
-                <Image className="mx-auto" width={200} src={Logo}></Image>
+              <Link to="/">
+                <img
+                  src="https://i.ibb.co/HpYr1kc/logo.png"
+                  className="w-40"
+                  alt=""
+                />
               </Link>
               <h1 class="text-xl md:text-2xl font-bold leading-tight mt-12">
                 Log in to your account
@@ -165,7 +165,7 @@ const page = () => {
               </div>
             </button>
 
-            <p class="mt-8">
+            <p className="mt-8">
               You dont have any Account!
               <Link
                 href="/signup"
@@ -181,4 +181,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Login;

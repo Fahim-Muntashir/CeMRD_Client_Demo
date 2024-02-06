@@ -11,6 +11,7 @@ import ManageUser from "../pages/Admin/Manage/ManageUser";
 import ManageBlog from "../pages/Admin/Manage/ManageBlog";
 import ManageResearch from "../pages/Admin/Manage/ManageResearch";
 import SignUp from "../pages/SignUp/SignUp";
+import Login from "../pages/Login/Login";
 
 
 const router = createBrowserRouter([
@@ -54,6 +55,9 @@ const router = createBrowserRouter([
     }, {
         path: "signup",
         element: <SignUp></SignUp>
+    }, {
+        path: "login",
+        element: <Login></Login>
     }
 
 ])
