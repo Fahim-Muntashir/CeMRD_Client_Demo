@@ -2,11 +2,15 @@ import { createBrowserRouter } from "react-router-dom";
 import AdminLayout from "../components/layout/AdminLayout";
 import React from "react";
 import App from "../App";
-import AddBlog from "../pages/Admin/AddBlog";
-import AddNews from "../pages/Admin/AddNews";
-import AddEvent from "../pages/Admin/AddEvent";
-import AddAdviser from "../pages/Admin/AddAdviser";
-import AddResearch from "../pages/Admin/AddResearch";
+import AddBlog from "../pages/Admin/Add/AddBlog";
+import AddNews from "../pages/Admin/Add/AddNews";
+import AddEvent from "../pages/Admin/Add/AddEvent";
+import AddAdviser from "../pages/Admin/Add/AddAdviser";
+import AddResearch from "../pages/Admin/Add/AddResearch";
+import ManageUser from "../pages/Admin/Manage/ManageUser";
+import ManageBlog from "../pages/Admin/Manage/ManageBlog";
+import ManageResearch from "../pages/Admin/Manage/ManageResearch";
+
 
 const router = createBrowserRouter([
     {
@@ -32,6 +36,18 @@ const router = createBrowserRouter([
             }, {
                 path: "addresearch",
                 element: <AddResearch></AddResearch>
+            }, {
+                path: "manageusers",
+                element: <ManageUser></ManageUser>
+            }, {
+                path: 'manageblogs',
+                element: <ManageBlog></ManageBlog>
+            }, {
+                path: 'manageresearch',
+                element: <ManageResearch></ManageResearch>
+            },
+            {
+                path: 'managemresearch'
             }
         ],
     },

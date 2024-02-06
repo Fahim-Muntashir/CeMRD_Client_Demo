@@ -3,6 +3,10 @@ import { MdNaturePeople } from "react-icons/md";
 import { Link, Outlet } from "react-router-dom";
 import { RiCalendarEventFill } from "react-icons/ri";
 import { FaBlogger } from "react-icons/fa";
+import { FaUsersCog } from "react-icons/fa";
+import { LiaResearchgate } from "react-icons/lia";
+import { MdOutlinePendingActions } from "react-icons/md";
+
 import { GiArchiveResearch } from "react-icons/gi";
 const AdminLayout = () => {
     return (
@@ -66,6 +70,32 @@ const AdminLayout = () => {
                                 </Link>
                             </li>
                             <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
+                            <li className="min-w-max">
+                                <Link to="/dashboard/manageblogs" className="group flex items-center space-x-4 rounded-md px-4 py-3 text-gray-600">
+
+                                    <FaBlogger className="group-hover:text-cyan-300" />
+                                    <span className="group-hover:text-gray-700">Manage Blogs</span>
+                                </Link>
+                            </li>
+                            <li className="min-w-max">
+                                <Link to="/dashboard/manageusers" className="group flex items-center space-x-4 rounded-md px-4 py-3 text-gray-600">
+                                    <FaUsersCog
+                                        className="group-hover:text-cyan-300" />
+                                    <span className="group-hover:text-gray-700">Manage Users</span>
+                                </Link>
+                            </li>
+                            <li className="min-w-max">
+                                <Link to="/dashboard/manageresearch" className="group flex items-center space-x-4 rounded-md px-4 py-3 text-gray-600">
+                                    <LiaResearchgate className="group-hover:text-cyan-300" />
+                                    <span className="group-hover:text-gray-700">Manage Research</span>
+                                </Link>
+                            </li>
+                            <li className="min-w-max">
+                                <Link to="/dashboard/managemresearch" className="group flex items-center space-x-4 rounded-md px-4 py-3 text-gray-600">
+                                    <MdOutlinePendingActions className="group-hover:text-cyan-300" />
+                                    <span className="group-hover:text-gray-700">Pending MResearch</span>
+                                </Link>
+                            </li>
                         </ul>
                     </div>
                     <div className="w-max -mb-3">

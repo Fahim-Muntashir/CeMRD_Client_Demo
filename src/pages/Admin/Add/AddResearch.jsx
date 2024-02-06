@@ -11,22 +11,19 @@ const AddResearch = () => {
   const handleResearchSubmit = (event) => {
     event.preventDefault();
 
-    fetch(
-      "https://cemrd-online.vercel.appvercel.app/api/research/addresearch",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          researchImg,
-          challangeTitle,
-          challangeDescription,
-          responseTitle,
-          responseDescription,
-        }),
-      }
-    )
+    fetch("https://cemrd-online.vercel.app/api/research/addresearch/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        researchImg,
+        challangeTitle,
+        challangeDescription,
+        responseTitle,
+        responseDescription,
+      }),
+    })
       .then(() => {
         Swal.fire({
           title: "Research Submitted Successfully!",
