@@ -1,7 +1,4 @@
-import React from "react";
 import Container from "./Container";
-import Logo from "/public/Images/logo.png";
-import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -360,8 +357,11 @@ const Footer = () => {
               <p className="text-xs text-gray-500 dark:text-gray-400">
                 &copy; 2022. Company Name. All rights reserved.
               </p>
-
-              <Image width={200} src={Logo} alt="CeMRD Logo" />
+              <img
+                src="https://i.ibb.co/HpYr1kc/logo.png"
+                className="w-40"
+                alt=""
+              />{" "}
             </div>
           </div>
         </div>
