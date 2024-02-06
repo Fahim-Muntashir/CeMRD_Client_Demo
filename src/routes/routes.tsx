@@ -13,6 +13,8 @@ import ManageResearch from "../pages/Admin/Manage/ManageResearch";
 import SignUp from "../pages/SignUp/SignUp";
 import Login from "../pages/Login/Login";
 import About from "../pages/About/About";
+import Team from "../pages/Team/Team";
+import MemberDetails from "../pages/Team/MemberDetails";
 
 
 const router = createBrowserRouter([
@@ -62,6 +64,12 @@ const router = createBrowserRouter([
     }, {
         path: "about",
         element: <About></About>
+    }, {
+        path: 'team',
+        element: <Team></Team>,
+    }, {
+        path: "team/memberdetails",
+        element: <MemberDetails></MemberDetails>
     }
 
 ])

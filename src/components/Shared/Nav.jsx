@@ -42,7 +42,7 @@ const Nav = () => {
             Home
           </Navbar.Link>
           <Navbar.Link href="/about">About</Navbar.Link>
-          <Navbar.Link href="#">Services</Navbar.Link>
+          <Navbar.Link href="/Team">Team</Navbar.Link>
           <Navbar.Link href="#">Pricing</Navbar.Link>
           <Navbar.Link href="#">Contact</Navbar.Link>
         </Navbar.Collapse>
