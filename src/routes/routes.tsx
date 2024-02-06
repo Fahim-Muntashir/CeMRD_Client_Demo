@@ -12,6 +12,7 @@ import ManageBlog from "../pages/Admin/Manage/ManageBlog";
 import ManageResearch from "../pages/Admin/Manage/ManageResearch";
 import SignUp from "../pages/SignUp/SignUp";
 import Login from "../pages/Login/Login";
+import About from "../pages/About/About";
 
 
 const router = createBrowserRouter([
@@ -58,6 +59,9 @@ const router = createBrowserRouter([
     }, {
         path: "login",
         element: <Login></Login>
+    }, {
+        path: "about",
+        element: <About></About>
     }
 
 ])
