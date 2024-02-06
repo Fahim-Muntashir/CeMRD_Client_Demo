@@ -10,6 +10,7 @@ import AddResearch from "../pages/Admin/Add/AddResearch";
 import ManageUser from "../pages/Admin/Manage/ManageUser";
 import ManageBlog from "../pages/Admin/Manage/ManageBlog";
 import ManageResearch from "../pages/Admin/Manage/ManageResearch";
+import SignUp from "../pages/SignUp/SignUp";
 
 
 const router = createBrowserRouter([
@@ -50,7 +51,10 @@ const router = createBrowserRouter([
                 path: 'managemresearch'
             }
         ],
-    },
+    }, {
+        path: "signup",
+        element: <SignUp></SignUp>
+    }
 
 ])
 
