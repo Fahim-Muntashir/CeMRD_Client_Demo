@@ -15,6 +15,7 @@ import Login from "../pages/Login/Login";
 import About from "../pages/About/About";
 import Team from "../pages/Team/Team";
 import MemberDetails from "../pages/Team/MemberDetails";
+import AddMResearch from "../pages/Admin/Member/AddMResearch";
 
 
 const router = createBrowserRouter([
@@ -52,7 +53,10 @@ const router = createBrowserRouter([
                 element: <ManageResearch></ManageResearch>
             },
             {
-                path: 'managemresearch'
+                path: 'addmresearch',
+                element: <AddMResearch></AddMResearch>
+            }, {
+                path: 'updateprofile',
             }
         ],
     }, {

@@ -149,7 +149,7 @@ const AdminLayout = () => {
 
 
                                 <li className="min-w-max">
-                                    <Link to="/dashboard/manageresearch" className="group flex items-center space-x-4 rounded-md px-4 py-3 text-gray-600">
+                                    <Link to="/dashboard/addmresearch" className="group flex items-center space-x-4 rounded-md px-4 py-3 text-gray-600">
                                         <CgProfile className="group-hover:text-cyan-300" />
                                         <span className="group-hover:text-gray-700">Update Profile</span>
                                     </Link>
@@ -162,7 +162,7 @@ const AdminLayout = () => {
                                     </Link>
                                 </li>
                                 <li className="min-w-max">
-                                    <Link to="/dashboard/manageresearch" className="group flex items-center space-x-4 rounded-md px-4 py-3 text-gray-600">
+                                    <Link to="/dashboard/addmresearch" className="group flex items-center space-x-4 rounded-md px-4 py-3 text-gray-600">
                                         <LiaResearchgate className="group-hover:text-cyan-300" />
                                         <span className="group-hover:text-gray-700">Add Research</span>
                                     </Link>
