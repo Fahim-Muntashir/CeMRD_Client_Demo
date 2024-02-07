@@ -24,7 +24,7 @@ import SingleBlog from "../pages/Blog/SingleBlog";
 import Events from "../pages/Event/Events";
 
 
-const router = createBrowserRouter([
+const Router = createBrowserRouter([
     {
         path: '/',
         element: <App></App>,
@@ -100,4 +100,4 @@ const router = createBrowserRouter([
 
 ])
 
-export default router;
+export default Router;
