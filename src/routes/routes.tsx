@@ -17,6 +17,8 @@ import Team from "../pages/Team/Team";
 import MemberDetails from "../pages/Team/MemberDetails";
 import AddMResearch from "../pages/Admin/Member/AddMResearch";
 import Profile from "../pages/Admin/Member/Profile";
+import Research from "../pages/Research/Research";
+import SingleResearch from "../pages/Research/SingleResearch";
 
 
 const router = createBrowserRouter([
@@ -76,6 +78,12 @@ const router = createBrowserRouter([
     }, {
         path: "team/memberdetails",
         element: <MemberDetails></MemberDetails>
+    }, {
+        path: "research",
+        element: <Research></Research>
+    }, {
+        path: "research/:id",
+        element: <SingleResearch></SingleResearch>
     }
 
 ])
