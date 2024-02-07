@@ -147,7 +147,7 @@ const Login = () => {
                     d="M0 11l17 13 7-6.1L48 14V0H0z"
                   />
                   <path
-                    clipPath="url(#b)"
+                    clip-path="url(#b)"
                     fill="#34A853"
                     d="M0 37l30-23 7.9 1L48 0v48H0z"
                   />

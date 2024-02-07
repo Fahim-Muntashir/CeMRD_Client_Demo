@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { MdNaturePeople } from "react-icons/md";
 import { Link, Outlet } from "react-router-dom";
 import { RiCalendarEventFill } from "react-icons/ri";
@@ -8,7 +8,35 @@ import { LiaResearchgate } from "react-icons/lia";
 import { MdOutlinePendingActions } from "react-icons/md";
 
 import { GiArchiveResearch } from "react-icons/gi";
+import UserRole from "../../hooks/userRole";
+import useAuth from "../../hooks/useAuth";
 const AdminLayout = () => {
+
+    const { user, logout } = useAuth();
+    const [role, setRole] = useState('')
+    const roleCheck = async () => {
+        try {
+            const response = await fetch(
+                `https://cemrd-online.vercel.app/api/auth/users/role/${user.email}`
+            );
+
+            if (response.ok) {
+                const data = await response.json();
+                setRole(data.data)
+            } else {
+                console.error("Failed to fetch role data");
+            }
+        } catch (error) {
+            console.error("Error fetching role data", error);
+        }
+    }
+
+    if (user?.email) {
+        roleCheck()
+    }
+
+    console.log(role);
+
     return (
         <div className="min-h-screen flex bg-white-900">
             <div className="sidebar min-h-screen w-[140px] md:w-[64px] overflow-hidden border-r md:hover:w-80 lg:w-64 lg:hover:w-64 hover:bg-white hover:shadow-lg">

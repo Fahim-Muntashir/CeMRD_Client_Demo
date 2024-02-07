@@ -18,6 +18,8 @@ function Page() {
   const [address, setAddress] = useState("");
   const [about, setAbout] = useState("");
 
+  console.log(researchData);
+
   useEffect(() => {
     const getMemberProfileData = async () => {
       try {
@@ -42,8 +44,26 @@ function Page() {
       }
     };
 
+    const getMemberResearch = async () => {
+      try {
+        const response = await fetch(
+          `https://cemrd-online.vercel.app/api/memberresearch/getresearch/${email}`
+        );
+
+        if (response.ok) {
+          const data = await response.json();
+          setResearchData(data.data);
+        } else {
+          console.error("Failed to fetch profile data");
+        }
+      } catch (error) {
+        console.error("Error fetching profile data", error);
+      }
+    };
+
     if (email) {
       getMemberProfileData();
+      getMemberResearch();
     }
   }, [email]);
 
