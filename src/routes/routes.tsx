@@ -19,6 +19,9 @@ import AddMResearch from "../pages/Admin/Member/AddMResearch";
 import Profile from "../pages/Admin/Member/Profile";
 import Research from "../pages/Research/Research";
 import SingleResearch from "../pages/Research/SingleResearch";
+import Blog from "../pages/Blog/Blog";
+import SingleBlog from "../pages/Blog/SingleBlog";
+import Events from "../pages/Event/Events";
 
 
 const router = createBrowserRouter([
@@ -84,6 +87,15 @@ const router = createBrowserRouter([
     }, {
         path: "research/:id",
         element: <SingleResearch></SingleResearch>
+    }, {
+        path: "blog",
+        element: <Blog></Blog>
+    }, {
+        path: "blog/:id",
+        element: <SingleBlog></SingleBlog>
+    }, {
+        path: "events",
+        element: <Events></Events>
     }
 
 ])
