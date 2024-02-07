@@ -10,6 +10,7 @@ import { CgProfile } from "react-icons/cg";
 import { GiArchiveResearch } from "react-icons/gi";
 import useAuth from "../../hooks/useAuth";
 import { AiOutlineProfile } from "react-icons/ai";
+import { Toaster } from "react-hot-toast";
 const AdminLayout = () => {
 
     const { user, logout } = useAuth();
@@ -37,6 +38,7 @@ const AdminLayout = () => {
 
     return (
         <div className="min-h-screen flex bg-white-900">
+            <Toaster></Toaster>
             <div className="sidebar min-h-screen w-[140px] md:w-[64px] overflow-hidden border-r md:hover:w-80 lg:w-64 lg:hover:w-64 hover:bg-white hover:shadow-lg">
                 <div className="flex h-screen flex-col justify-between pt-2 pb-6">
                     <div>
@@ -149,7 +151,7 @@ const AdminLayout = () => {
 
 
                                 <li className="min-w-max">
-                                    <Link to="/dashboard/addmresearch" className="group flex items-center space-x-4 rounded-md px-4 py-3 text-gray-600">
+                                    <Link to="/dashboard/profile" className="group flex items-center space-x-4 rounded-md px-4 py-3 text-gray-600">
                                         <CgProfile className="group-hover:text-cyan-300" />
                                         <span className="group-hover:text-gray-700">Update Profile</span>
                                     </Link>
@@ -168,7 +170,7 @@ const AdminLayout = () => {
                                     </Link>
                                 </li>
                                 <li className="min-w-max">
-                                    <Link to="/dashboard/manageresearch" className="group flex items-center space-x-4 rounded-md px-4 py-3 text-gray-600">
+                                    <Link to="/dashboard/*" className="group flex items-center space-x-4 rounded-md px-4 py-3 text-gray-600">
                                         <AiOutlineProfile className="group-hover:text-cyan-300" />
                                         <span className="group-hover:text-gray-700">Manage Research</span>
                                     </Link>
