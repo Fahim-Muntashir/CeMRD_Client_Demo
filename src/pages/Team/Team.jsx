@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom";
 import Member from "./Member";
+import Adviser from "./Adviser";
+import Nav from "../../components/Shared/Nav";
 const Team = () => {
   const phoneNumber = "+8801762775529"; // Replace with the desired WhatsApp number
 
   return (
     <div>
+      <Nav></Nav>
       <div className="p-16">
         <div className="p-8 bg-white shadow mt-24">
           {" "}
@@ -90,7 +93,7 @@ const Team = () => {
           </div>
         </div>
       </div>
-
+      <Adviser></Adviser>
       <Member></Member>
     </div>
   );

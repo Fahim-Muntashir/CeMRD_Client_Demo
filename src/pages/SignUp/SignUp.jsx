@@ -45,12 +45,26 @@ const SignUp = () => {
       const user = await googleLogin();
       toast.dismiss(toastId);
       toast.success("Successfully Sign In!");
+      const email = user.user.email;
+      const name = user.user.displayName;
+      fetch("https://cemrd-online.vercel.app/api/users/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email,
+          name,
+        }),
+      });
+      toast.dismiss(toastId);
+      toast.success("Successfully Sign Up!");
       if (user) {
         navigate("/", { scroll: false });
       }
     } catch (error) {
       console.log(error);
-      toast.error(error.message || "user not Sign In");
+      toast.error(error.message || "user not Sign Uped");
     }
   };
   return (
