@@ -42,8 +42,15 @@ const AdminLayout = () => {
             <div className="sidebar min-h-screen w-[140px] md:w-[64px] overflow-hidden border-r md:hover:w-80 lg:w-64 lg:hover:w-64 hover:bg-white hover:shadow-lg">
                 <div className="flex h-screen flex-col justify-between pt-2 pb-6">
                     <div>
+
+
                         <div className="w-max p-2.5">
-                            <img src="https://i.ibb.co/HpYr1kc/logo.png" className="w-40" alt="" />
+
+                            <a href="/">
+
+
+                                <img src="https://i.ibb.co/HpYr1kc/logo.png" className="w-40" alt="" />
+                            </a>
                         </div>
 
 

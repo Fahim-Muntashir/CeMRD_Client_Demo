@@ -5,6 +5,7 @@ import toast, { Toaster } from "react-hot-toast";
 import useAuth from "../../hooks/useAuth";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import ActiveLink from "../ActiveLink/ActiveLink";
 
 const Nav = () => {
   const { user, logout } = useAuth();
@@ -101,12 +102,12 @@ const Nav = () => {
           </Dropdown>
         ) : (
           <>
-            <Link
+            <ActiveLink
               className="mt-1 w-full bg-[white] px-6 py-3 text-sm font-bold uppercase tracking-wide text-black hover:text-white transition-none hover:bg-blue-900 sm:mt-0 sm:w-auto sm:shrink-0"
               to="/login"
             >
               Login
-            </Link>
+            </ActiveLink>
             <Link
               className="mt-1 w-full bg-[#1c1748] px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition-none hover:bg-blue-900 sm:mt-0 sm:w-auto sm:shrink-0"
               to="/signup"
@@ -119,16 +120,16 @@ const Nav = () => {
         <Navbar.Toggle />
       </div>{" "}
       <Navbar.Collapse>
-        <Navbar.Link href="#" active>
+        <ActiveLink to="/" active>
           Home
-        </Navbar.Link>
-        <Navbar.Link href="about">About</Navbar.Link>
-        <Navbar.Link href="events">Events</Navbar.Link>
+        </ActiveLink>
+        <ActiveLink to="/about">About</ActiveLink>
+        <ActiveLink to="/events">Events</ActiveLink>
 
-        <Navbar.Link href="research">Research</Navbar.Link>
-        <Navbar.Link href="team">Team</Navbar.Link>
-        <Navbar.Link href="blog">Blog</Navbar.Link>
-        <Navbar.Link href="#">Contact</Navbar.Link>
+        <ActiveLink to="/research">Research</ActiveLink>
+        <ActiveLink to="/team">Team</ActiveLink>
+        <ActiveLink to="/blog">Blog</ActiveLink>
+        <ActiveLink to="/contact">Contact</ActiveLink>
       </Navbar.Collapse>
     </Navbar>
   );
