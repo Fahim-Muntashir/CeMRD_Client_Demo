@@ -50,7 +50,7 @@ const Header = ({ title, description }) => {
                   {title}
                 </span>{" "}
               </h2>
-              <p className="text-base text-indigo-200 md:text-lg">
+              <p className="text-base text-indigo-200 md:text-lg text-justify">
                 {description}
               </p>
             </div>

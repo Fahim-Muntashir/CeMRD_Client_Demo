@@ -25,7 +25,7 @@ const Statistic = () => {
               15+
             </h6>
             <p className="mb-2 font-bold text-md">Total Research</p>
-            <p className="text-gray-700">
+            <p className="text-gray-700text-justify">
               CeMRD has conducted over 15 research projects, aiming to drive
               innovation and knowledge advancement.
             </p>

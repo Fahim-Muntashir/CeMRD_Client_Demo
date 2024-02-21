@@ -1,5 +1,3 @@
-import React from "react";
-
 const FirstAt = () => {
   return (
     <div>
@@ -12,7 +10,7 @@ const FirstAt = () => {
                 <br className="hidden md:block" />
                 Driving Innovation and Knowledge Advancement
               </h2>
-              <p className="text-base text-gray-700 md:text-lg">
+              <p className="text-base text-gray-700 md:text-lg text-justify">
                 The Center for Multidisciplinary Research and Development
                 (CeMRD), founded by Mr. Mahmudul Hasan on October 8, 2021, is
                 committed to propelling innovation and advancing knowledge. The
@@ -41,7 +39,7 @@ const FirstAt = () => {
                 <h6 className="mb-2 font-semibold leading-5">
                   Collaborative Exploration
                 </h6>
-                <p className="text-sm text-gray-900">
+                <p className="text-sm text-gray-900 text-justify">
                   CeMRD actively fosters collaboration, bringing together
                   diverse expertise to act as a catalyst for groundbreaking
                   discoveries.
@@ -66,7 +64,7 @@ const FirstAt = () => {
                 <h6 className="mb-2 font-semibold leading-5">
                   Transformative Research
                 </h6>
-                <p className="text-sm text-gray-900">
+                <p className="text-sm text-gray-900 text-justify">
                   By cultivating a dynamic environment that encourages curiosity
                   and creativity, CeMRD aspires to shape the future through
                   transformative research.

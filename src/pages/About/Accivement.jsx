@@ -10,7 +10,7 @@ const Accivement = () => {
                   We Love to Do Enovation
                 </h2>
 
-                <p class="mt-4 text-gray-500">
+                <p class="mt-4 text-gray-500 text-justify">
                   In our extensive research endeavors, we have collaborated with
                   numerous esteemed organizations, agencies, and even the
                   government of Bangladesh. Our engagements span a diverse
@@ -42,7 +42,7 @@ const Accivement = () => {
                   <h5 class="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
                     Ministry of Sciecne and Technology, Bangladesh
                   </h5>
-                  <p class="block font-sans text-base antialiased font-light leading-relaxed text-inherit">
+                  <p class="block font-sans text-base antialiased font-light leading-relaxed text-inherit text-justify">
                     Predicting carbon emission using machine learning approaches
                     between most climates affected countries and most developed
                     countries: assessing the overtone of the impact of economic

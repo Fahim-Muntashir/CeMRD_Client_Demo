@@ -7,7 +7,7 @@ const About = () => {
             <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
               Your Vision, Our Expertise in Renovation.
             </h2>
-            <p className="mb-4">
+            <p className="mb-4 text-justify">
               Center for Multidisciplinary Research and Development (CeMRD) is a
               Research and Development organization founded by Mr. Mahmudul
               Hasan. It starts journey at 08 October 2021 with some research
