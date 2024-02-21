@@ -120,16 +120,30 @@ const Nav = () => {
         <Navbar.Toggle />
       </div>{" "}
       <Navbar.Collapse>
-        <ActiveLink to="/" active>
-          Home
-        </ActiveLink>
-        <ActiveLink to="/about">About</ActiveLink>
-        <ActiveLink to="/events">Events</ActiveLink>
+        <Navbar.Link href="/">
+          <ActiveLink to="/" active>
+            Home
+          </ActiveLink>
+        </Navbar.Link>
+        <Navbar.Link href="/">
+          <ActiveLink to="/about">About</ActiveLink>
+        </Navbar.Link>
+        <Navbar.Link href="/">
+          <ActiveLink to="/events">Events</ActiveLink>{" "}
+        </Navbar.Link>
 
-        <ActiveLink to="/research">Research</ActiveLink>
-        <ActiveLink to="/team">Team</ActiveLink>
-        <ActiveLink to="/blog">Blog</ActiveLink>
-        <ActiveLink to="/contact">Contact</ActiveLink>
+        <Navbar.Link href="/">
+          <ActiveLink to="/research">Research</ActiveLink>{" "}
+        </Navbar.Link>
+        <Navbar.Link href="/">
+          <ActiveLink to="/team">Team</ActiveLink>{" "}
+        </Navbar.Link>
+        <Navbar.Link href="/">
+          <ActiveLink to="/blog">Blog</ActiveLink>{" "}
+        </Navbar.Link>
+        <Navbar.Link href="/">
+          <ActiveLink to="/contact">Contact</ActiveLink>{" "}
+        </Navbar.Link>
       </Navbar.Collapse>
     </Navbar>
   );
