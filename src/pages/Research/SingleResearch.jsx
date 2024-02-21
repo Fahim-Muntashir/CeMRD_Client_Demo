@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 import { useParams } from "react-router-dom";
 import Container from "../../components/Shared/Container";
+import Nav from "../../components/Shared/Nav";
 
 const SingleResearch = () => {
   const { id } = useParams();
@@ -37,6 +38,7 @@ const SingleResearch = () => {
 
   return (
     <div className="">
+      <Nav></Nav>
       <Container>
         <div className="p-5 mx-auto sm:p-10 md:p-16 dark:bg-gray-800 dark:text-gray-100">
           <div className="flex flex-col max-w-3xl mx-auto overflow-hidden rounded">
@@ -50,7 +52,7 @@ const SingleResearch = () => {
                 <a
                   rel="noopener noreferrer"
                   href="#"
-                  className="inline-block text-2xl font-semibold sm:text-3xl"
+                  className="inline-block text-2xl font-semibold sm:text-3xl bg-black text-white p-4 tracking-wide"
                 >
                   {data.challangeTitle}
                 </a>

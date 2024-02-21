@@ -81,11 +81,11 @@ const Nav = () => {
             {normalUser || (
               <>
                 <Dropdown.Item>
-                  <Link to="dashboard/profile">DashBoard</Link>
+                  <Link to="/dashboard/">DashBoard</Link>
                 </Dropdown.Item>
 
                 <Dropdown.Item>
-                  <Link href="dashboard/profile">Profile</Link>
+                  <Link href="/dashboard/profile">Profile</Link>
                 </Dropdown.Item>
               </>
             )}
@@ -102,12 +102,12 @@ const Nav = () => {
           </Dropdown>
         ) : (
           <>
-            <ActiveLink
+            <Link
               className="mt-1 w-full bg-[white] px-6 py-3 text-sm font-bold uppercase tracking-wide text-black hover:text-white transition-none hover:bg-blue-900 sm:mt-0 sm:w-auto sm:shrink-0"
               to="/login"
             >
               Login
-            </ActiveLink>
+            </Link>
             <Link
               className="mt-1 w-full bg-[#1c1748] px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition-none hover:bg-blue-900 sm:mt-0 sm:w-auto sm:shrink-0"
               to="/signup"
