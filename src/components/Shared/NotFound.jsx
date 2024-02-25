@@ -1,26 +1,62 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 const NotFound = () => {
   return (
-    <main class="h-screen w-full flex flex-col justify-center items-center bg-[#1A2238]">
-      <h1 class="text-9xl font-extrabold text-white tracking-widest">404</h1>
-      <div class="bg-[#0e2490] text-white font-bold px-2 text-sm rounded rotate-12 absolute">
-        Page Not Found
-      </div>
-      <button class="mt-5">
-        <Link
-          to="/"
-          class="relative inline-block text-sm font-medium text-[#0c71ff] group active:text-orange-500 focus:outline-none focus:ring"
-        >
-          <span class="absolute inset-0 transition-transform translate-x-0.5 translate-y-0.5 bg-[#ffffff] group-hover:translate-y-0 group-hover:translate-x-0"></span>
+    <section className="bg-white dark:bg-gray-900 ">
+      <div className="container min-h-screen px-6 py-12 mx-auto lg:flex md:items-center lg:items-center lg:gap-12">
+        <div className="wf-ull lg:w-1/2">
+          <p className="text-sm font-medium text-blue-500 dark:text-blue-400">
+            404 error
+          </p>
+          <h1 className="mt-3 text-2xl font-semibold text-gray-800 dark:text-white md:text-3xl">
+            Page not found
+          </h1>
+          <p className="mt-4 text-gray-500 dark:text-gray-400">
+            Sorry, the page you are looking for doesnt exist.Here are some
+            helpful links:
+          </p>
 
-          <span class="relative block px-8 py-3 bg-[#1A2238] border border-current">
-            <router-link to="/">Go Home</router-link>
-          </span>
-        </Link>
-      </button>
-    </main>
+          <div className="flex items-center mt-6 gap-x-3">
+            <Link
+              to="/"
+              className="flex items-center justify-center w-1/2 px-5 py-2 text-sm text-gray-700 transition-colors duration-200 bg-white border rounded-lg gap-x-2 sm:w-auto dark:hover:bg-gray-800 dark:bg-gray-900 hover:bg-gray-100 dark:text-gray-200 dark:border-gray-700"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="1.5"
+                stroke="currentColor"
+                className="w-5 h-5 rtl:rotate-180"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18"
+                />
+              </svg>
+
+              <span>Go back</span>
+            </Link>
+
+            <Link
+              to="research"
+              className="w-1/2 px-5 py-2 text-sm tracking-wide text-white transition-colors duration-200 bg-blue-500 rounded-lg shrink-0 sm:w-auto hover:bg-blue-600 dark:hover:bg-blue-500 dark:bg-blue-600"
+            >
+              Take me Research
+            </Link>
+          </div>
+        </div>
+
+        <div className="relative w-full mt-12 lg:w-1/2 lg:mt-0">
+          <img
+            className="w-full max-w-lg lg:mx-auto"
+            src="https://img.freepik.com/free-vector/404-error-with-cute-animal-concept-illustration_114360-1880.jpg?w=740&t=st=1708848199~exp=1708848799~hmac=78948aa4c14bf17ff28763559a1c9004b40237181bc51cbc8eaa129a14f9f3f8"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
   );
 };
 

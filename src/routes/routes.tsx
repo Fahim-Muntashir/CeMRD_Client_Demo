@@ -22,6 +22,7 @@ import SingleResearch from "../pages/Research/SingleResearch";
 import Blog from "../pages/Blog/Blog";
 import SingleBlog from "../pages/Blog/SingleBlog";
 import Events from "../pages/Event/Events";
+import NotFound from "../components/Shared/NotFound";
 
 
 const router = createBrowserRouter([
@@ -96,6 +97,9 @@ const router = createBrowserRouter([
     }, {
         path: "events",
         element: <Events></Events>
+    }, {
+        path: "*",
+        element: <NotFound></NotFound>
     }
 
 ])
