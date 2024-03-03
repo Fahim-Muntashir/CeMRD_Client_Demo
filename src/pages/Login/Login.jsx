@@ -178,7 +178,7 @@ const Login = () => {
             <p className="mt-8">
               You dont have any Account!
               <Link
-                href="/signup"
+                to="/signup"
                 className="text-blue-500 hover:text-blue-700 font-semibold"
               >
                 Sign Up
