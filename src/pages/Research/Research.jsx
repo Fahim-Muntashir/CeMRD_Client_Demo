@@ -29,54 +29,78 @@ const Research = () => {
   return (
     <div>
       <Nav></Nav>
-      <div className="py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-2 lg:py-20">
+      <div className="my-20">
         {data?.map((research) => (
-          <div className="dark:bg-gray-800 dark:text-gray-100 my-3">
-            <div className="container max-w-4xl px-4 py-6 mx-auto rounded-lg shadow-sm dark:bg-gray-900 grid grid-cols-1 md:grid-cols-6 gap-6">
-              <div className="md:col-span-3">
-                {/* Existing content */}
-                <div className="flex items-center justify-between">
-                  <span className="text-sm dark:text-gray-400">
-                    Jun 1, 2020
+          <section className="p-4 lg:p-8 dark:bg-gray-800 dark:text-gray-100">
+            <div className="container mx-auto space-y-12">
+              <div className="flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row">
+                <img
+                  src="https://source.unsplash.com/640x480/?1"
+                  alt=""
+                  className="h-80 dark:bg-gray-500 aspect-video"
+                />
+                <div className="flex flex-col justify-center flex-1 p-6 dark:bg-gray-900">
+                  <span className="text-xs uppercase dark:text-gray-400">
+                    Join, it s free
                   </span>
-                  <a
-                    rel="noopener noreferrer"
-                    href="#"
-                    className="px-2 py-1 font-bold rounded dark:bg-violet-400 dark:text-gray-900"
-                  >
-                    CeMRD
-                  </a>
-                </div>
-                <div className="mt-3">
-                  <a
-                    rel="noopener noreferrer"
-                    href="#"
-                    className="text-2xl font-bold hover:underline"
-                  >
-                    {research.challangeTitle}
-                  </a>
-                  <p className="mt-2">{research.challangeDescription}</p>
-                </div>
-                <div className="flex items-center justify-between mt-4">
-                  <button
-                    rel="noopener noreferrer"
-                    className="hover:underline text-blue-700"
-                    onClick={() => handleViewDetails(research._id)}
-                  >
-                    Read more
+                  <h3 className="text-3xl font-bold">
+                    We re not reinventing the wheel
+                  </h3>
+                  <p className="my-6 dark:text-gray-400">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolor aliquam possimus quas, error esse quos.
+                  </p>
+                  <button type="button" className="self-start">
+                    Action
                   </button>
                 </div>
               </div>
-              <div className="md:col-span-3">
-                {/* Image */}
+              <div className="flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row-reverse">
                 <img
-                  src="https://i.ibb.co/kQZtgXt/pexels-pixabay-260561.jpg"
-                  alt="Description of the image"
-                  className="w-full h-auto rounded-md"
+                  src="https://source.unsplash.com/640x480/?2"
+                  alt=""
+                  className="h-80 dark:bg-gray-500 aspect-video"
                 />
+                <div className="flex flex-col justify-center flex-1 p-6 dark:bg-gray-900">
+                  <span className="text-xs uppercase dark:text-gray-400">
+                    Join, it s free
+                  </span>
+                  <h3 className="text-3xl font-bold">
+                    We re not reinventing the wheel
+                  </h3>
+                  <p className="my-6 dark:text-gray-400">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolor aliquam possimus quas, error esse quos.
+                  </p>
+                  <button type="button" className="self-start">
+                    Action
+                  </button>
+                </div>
+              </div>
+              <div className="flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row">
+                <img
+                  src="https://source.unsplash.com/640x480/?3"
+                  alt=""
+                  className="h-80 dark:bg-gray-500 aspect-video"
+                />
+                <div className="flex flex-col justify-center flex-1 p-6 dark:bg-gray-900">
+                  <span className="text-xs uppercase dark:text-gray-400">
+                    Join, it s free
+                  </span>
+                  <h3 className="text-3xl font-bold">
+                    We re not reinventing the wheel
+                  </h3>
+                  <p className="my-6 dark:text-gray-400">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolor aliquam possimus quas, error esse quos.
+                  </p>
+                  <button type="button" className="self-start">
+                    Action
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
+          </section>
         ))}
       </div>
       <Footer></Footer>
