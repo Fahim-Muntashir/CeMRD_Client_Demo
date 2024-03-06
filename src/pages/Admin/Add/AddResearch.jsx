@@ -2,12 +2,12 @@ import { useState } from "react";
 import Swal from "sweetalert2";
 
 const AddResearch = () => {
-  const [researchImg, setResearchImg] = useState("");
-  const [challangeTitle, setChallangeTitle] = useState("");
-  const [challangeDescription, setChallangeDescription] = useState("");
-  const [responseTitle, setResponseTitle] = useState("");
-  const [responseDescription, setResponseDescription] = useState("");
-
+  const [title, setTitle] = useState("");
+  const [abstract, setAbstract] = useState("");
+  const [authorName, setAuthorName] = useState("");
+  const [vanue, SetVanueName] = useState("");
+  const [img, setImageLink] = useState("");
+  const [link, setLink] = useState();
   const handleResearchSubmit = (event) => {
     event.preventDefault();
 
@@ -17,11 +17,12 @@ const AddResearch = () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        researchImg,
-        challangeTitle,
-        challangeDescription,
-        responseTitle,
-        responseDescription,
+        title,
+        abstract,
+        authorName,
+        vanue,
+        img,
+        link,
       }),
     })
       .then(() => {
@@ -31,11 +32,12 @@ const AddResearch = () => {
           icon: "success",
         });
         // Reset form fields to empty values
-        setResearchImg("");
-        setChallangeTitle("");
-        setChallangeDescription("");
-        setResponseTitle("");
-        setResponseDescription("");
+        setTitle("");
+        setAbstract("");
+        setAuthorName("");
+        SetVanueName("");
+        setImageLink("");
+        setLink("");
       })
       .catch((error) => {
         console.log(error);
@@ -70,35 +72,17 @@ const AddResearch = () => {
                     <div className="relative w-full mb-3">
                       <label
                         className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                        htmlFor="researchImg"
-                      >
-                        Research Image
-                      </label>
-                      <input
-                        type="text"
-                        value={researchImg}
-                        className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                        name="researchImg"
-                        required
-                        onChange={(e) => setResearchImg(e.target.value)}
-                      />
-                    </div>
-                  </div>
-                  <div className="w-full lg:w-6/12 px-4">
-                    <div className="relative w-full mb-3">
-                      <label
-                        className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
                         htmlFor="challangeTitle"
                       >
-                        Challenge Title
+                        Title
                       </label>
                       <input
                         type="text"
-                        value={challangeTitle}
+                        value={title}
                         className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                         name="challangeTitle"
                         required
-                        onChange={(e) => setChallangeTitle(e.target.value)}
+                        onChange={(e) => setTitle(e.target.value)}
                       />
                     </div>
                   </div>
@@ -108,16 +92,14 @@ const AddResearch = () => {
                         className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
                         htmlFor="challangeDescription"
                       >
-                        Challenge Description
+                        Abstract
                       </label>
                       <textarea
-                        value={challangeDescription}
+                        value={abstract}
                         className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                         name="challangeDescription"
                         required
-                        onChange={(e) =>
-                          setChallangeDescription(e.target.value)
-                        }
+                        onChange={(e) => setAbstract(e.target.value)}
                       />
                     </div>
                   </div>
@@ -127,15 +109,15 @@ const AddResearch = () => {
                         className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
                         htmlFor="responseTitle"
                       >
-                        Response Title
+                        Authhor Name
                       </label>
                       <input
                         type="text"
-                        value={responseTitle}
+                        value={authorName}
                         className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                         name="responseTitle"
                         required
-                        onChange={(e) => setResponseTitle(e.target.value)}
+                        onChange={(e) => setAuthorName(e.target.value)}
                       />
                     </div>
                   </div>
@@ -145,14 +127,50 @@ const AddResearch = () => {
                         className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
                         htmlFor="responseDescription"
                       >
-                        Response Description
+                        Vanue
                       </label>
                       <textarea
-                        value={responseDescription}
+                        value={vanue}
                         className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                         name="responseDescription"
                         required
-                        onChange={(e) => setResponseDescription(e.target.value)}
+                        onChange={(e) => SetVanueName(e.target.value)}
+                      />
+                    </div>
+                  </div>
+                  <div className="w-full lg:w-6/12 px-4">
+                    <div className="relative w-full mb-3">
+                      <label
+                        className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                        htmlFor="researchImg"
+                      >
+                        Research Image
+                      </label>
+                      <input
+                        type="text"
+                        value={img}
+                        className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                        name="researchImg"
+                        required
+                        onChange={(e) => setImageLink(e.target.value)}
+                      />
+                    </div>
+                  </div>
+                  <div className="w-full lg:w-6/12 px-4">
+                    <div className="relative w-full mb-3">
+                      <label
+                        className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                        htmlFor="researchImg"
+                      >
+                        Research Link
+                      </label>
+                      <input
+                        type="text"
+                        value={link}
+                        className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                        name="researchImg"
+                        required
+                        onChange={(e) => setLink(e.target.value)}
                       />
                     </div>
                   </div>
