@@ -40,17 +40,18 @@ const Research = () => {
                   className="h-80 dark:bg-gray-500 aspect-video"
                 />
                 <div className="flex flex-col justify-center flex-1 p-6 dark:bg-gray-900">
-                  <span className="text-xs uppercase dark:text-gray-400">
-                    Join, it s free
-                  </span>
-                  <h3 className="text-3xl font-bold">{research.title}</h3>
+                  {/* date */}
+                  <span className="text-xs uppercase dark:text-gray-400"></span>
+                  <a href={research.link} target="blank">
+                    <h3 className="text-3xl font-bold">{research.title}</h3>
+                  </a>
                   <p className="my-6 dark:text-gray-400">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Dolor aliquam possimus quas, error esse quos.
+                    {research.authorName}
                   </p>
                   <button
                     type="button"
                     className="font-semibold self-start text-blue-800"
+                    onClick={() => handleViewDetails(research._id)}
                   >
                     See More....
                   </button>
