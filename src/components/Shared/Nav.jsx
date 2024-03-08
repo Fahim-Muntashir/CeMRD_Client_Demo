@@ -135,6 +135,11 @@ const Nav = () => {
         <Navbar.Link href="/">
           <ActiveLink to="/research">Research</ActiveLink>{" "}
         </Navbar.Link>
+
+        <Navbar.Link href="/">
+          <ActiveLink to="/publications">Publications</ActiveLink>{" "}
+        </Navbar.Link>
+
         <Navbar.Link href="/">
           <ActiveLink to="/team">Team</ActiveLink>{" "}
         </Navbar.Link>

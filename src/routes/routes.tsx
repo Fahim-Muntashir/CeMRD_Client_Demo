@@ -23,6 +23,7 @@ import Blog from "../pages/Blog/Blog";
 import SingleBlog from "../pages/Blog/SingleBlog";
 import Events from "../pages/Event/Events";
 import NotFound from "../components/Shared/NotFound";
+import Researches from "../pages/Researches/Researches";
 
 
 const router = createBrowserRouter([
@@ -84,9 +85,12 @@ const router = createBrowserRouter([
         element: <MemberDetails></MemberDetails>
     }, {
         path: "research",
+        element: <Researches></Researches>
+    }, {
+        path: 'publications',
         element: <Research></Research>
     }, {
-        path: "research/:id",
+        path: "publications/:id",
         element: <SingleResearch></SingleResearch>
     }, {
         path: "blog",
