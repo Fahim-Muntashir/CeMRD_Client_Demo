@@ -23,7 +23,7 @@ const Research = () => {
   const handleViewDetails = (id) => {
     console.log(id);
 
-    navigate(`/research/${id}`);
+    navigate(`/publications/${id}`);
   };
 
   return (
@@ -35,29 +35,43 @@ const Research = () => {
             {data?.map((research) => (
               <div class="w-full px-4 md:w-1/2 lg:w-1/3">
                 <div class="mx-auto mb-10 max-w-[370px]">
-                  <div class="mb-8 overflow-hidden rounded">
-                    <img
-                      src="https://cdn.tailgrids.com/2.0/image/application/images/blogs/blog-01/image-02.jpg"
-                      alt="image"
-                      class="w-full"
-                    />
+                  <div class="mb-2 overflow-hidden rounded">
+                    <a
+                      href={research.link}
+                      class="text-dark hover:text-primary inline-block text-lg font-semibold"
+                      target="blank"
+                    >
+                      {" "}
+                      <img
+                        src={research.img}
+                        alt="image"
+                        class="w-full h-52 object-cover"
+                      />{" "}
+                    </a>
                   </div>
                   <div>
-                    <span class="mb-5 inline-block rounded py-1 px-4 text-center text-xs font-semibold leading-loose">
-                      Mar 15, 2023
+                    <span class="mb-2 inline-block rounded text-center text-normal leading-loose ">
+                      {research.date}
                     </span>
                     <h3>
                       <a
-                        href="javascript:void(0)"
-                        class="text-dark hover:text-primary mb-4 inline-block text-xl font-semibold sm:text-2xl lg:text-xl xl:text-2xl"
+                        href={research.link}
+                        class="text-dark hover:text-primary mb-2 inline-block text-lg font-semibold"
+                        target="blank"
                       >
-                        How to earn more money as a wellness coach
+                        {research.title}
                       </a>
                     </h3>
                     <p class="text-body-color text-base">
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry.
+                      By {research.authorName}
                     </p>
+                    <button
+                      type="button"
+                      className="font-semibold self-start text-blue-800"
+                      onClick={() => handleViewDetails(research._id)}
+                    >
+                      See More....
+                    </button>
                   </div>
                 </div>
               </div>

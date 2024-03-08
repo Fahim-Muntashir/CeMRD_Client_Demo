@@ -7,6 +7,7 @@ const AddResearch = () => {
   const [authorName, setAuthorName] = useState("");
   const [vanue, SetVanueName] = useState("");
   const [img, setImageLink] = useState("");
+  const [date, setDate] = useState();
   const [link, setLink] = useState();
   const handleResearchSubmit = (event) => {
     event.preventDefault();
@@ -23,6 +24,7 @@ const AddResearch = () => {
         vanue,
         img,
         link,
+        date,
       }),
     })
       .then(() => {
@@ -38,6 +40,7 @@ const AddResearch = () => {
         SetVanueName("");
         setImageLink("");
         setLink("");
+        setDate("");
       })
       .catch((error) => {
         console.log(error);
@@ -153,6 +156,24 @@ const AddResearch = () => {
                         name="researchImg"
                         required
                         onChange={(e) => setImageLink(e.target.value)}
+                      />
+                    </div>
+                  </div>
+                  <div className="w-full lg:w-6/12 px-4">
+                    <div className="relative w-full mb-3">
+                      <label
+                        className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                        htmlFor="researchImg"
+                      >
+                        Research Date
+                      </label>
+                      <input
+                        type="text"
+                        value={date}
+                        className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                        name="date"
+                        required
+                        onChange={(e) => setDate(e.target.value)}
                       />
                     </div>
                   </div>

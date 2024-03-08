@@ -165,7 +165,7 @@ const Adviser = () => {
                 </div>
               </div>
             </div>
-            <div class="w-full bg-gray-900 rounded-lg sahdow-lg overflow-hidden flex flex-col md:flex-row">
+            {/* <div class="w-full bg-gray-900 rounded-lg sahdow-lg overflow-hidden flex flex-col md:flex-row">
               <div class="w-full md:w-2/5 h-80">
                 <img
                   class="object-center object-cover w-full h-full"
@@ -308,7 +308,7 @@ const Adviser = () => {
                   </a>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </section>
       </div>
