@@ -147,6 +147,9 @@ const Nav = () => {
           <ActiveLink to="/blog">Blog</ActiveLink>{" "}
         </Navbar.Link>
         <Navbar.Link href="/">
+          <ActiveLink to="/news">News</ActiveLink>{" "}
+        </Navbar.Link>
+        <Navbar.Link href="/">
           <ActiveLink to="/contact">Contact</ActiveLink>{" "}
         </Navbar.Link>
       </Navbar.Collapse>
