@@ -6,7 +6,7 @@ const Courses = () => {
     <>
       <Nav></Nav>
       <Container>
-        <div class="relative flex min-h-screen flex-col justify-center overflow-hidden bg-gray- py-6 sm:py-12">
+        <div class="relative flex min-h-screen flex-col justify-center overflow-hidden bg-gray- ">
           <div class="mx-auto max-w-screen-xl px-4 w-full">
             <div class="grid w-full sm:grid-cols-2 xl:grid-cols-4 gap-6">
               <div class="relative flex flex-col shadow-md rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300 max-w-sm">
