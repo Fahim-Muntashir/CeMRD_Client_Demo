@@ -37,8 +37,8 @@ const Research = () => {
                 <div class="mx-auto mb-10 max-w-[370px]">
                   <div class="mb-2 overflow-hidden rounded">
                     <a
-                      href={research.link}
-                      class="text-dark hover:text-primary inline-block text-lg font-semibold"
+                      onClick={() => handleViewDetails(research._id)}
+                      class="text-dark hover:text-primary inline-block text-lg cursor-pointer font-semibold"
                       target="blank"
                     >
                       {" "}
@@ -50,9 +50,12 @@ const Research = () => {
                     </a>
                   </div>
                   <div>
-                    <span class="mb-2 inline-block rounded text-center text-normal leading-loose ">
-                      {research.date}
-                    </span>
+                    <div className="flex justify-between">
+                      <span class="mb-2 inline-block rounded text-center text-normal leading-loose ">
+                        {research.date}
+                      </span>
+                      <span className="me-16">in {research.vanue}</span>
+                    </div>
                     <h3>
                       <a
                         href={research.link}
