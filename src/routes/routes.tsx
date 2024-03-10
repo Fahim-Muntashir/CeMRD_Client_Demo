@@ -25,7 +25,7 @@ import Events from "../pages/Event/Events";
 import NotFound from "../components/Shared/NotFound";
 import Researches from "../pages/Researches/Researches";
 import News from "../pages/News/News";
-import Courses from "../pages/Courses/courses";
+import Courses from "../pages/Courses/Courses";
 
 
 const router = createBrowserRouter([
