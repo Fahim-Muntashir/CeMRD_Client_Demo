@@ -30,7 +30,7 @@ const Profile = () => {
   const getMemberProfileData = async () => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/member/findmemberbyemail?email=${email}`
+        `https://cemrd-online.vercel.app/api/member/findmemberbyemail?email=${email}`
       );
 
       if (response.ok) {
