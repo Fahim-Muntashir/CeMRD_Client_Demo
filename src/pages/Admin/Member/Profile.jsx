@@ -11,6 +11,10 @@ const Profile = () => {
   const [imgUpload, setImgUpload] = useState(null);
   const [userData, setUserData] = useState({});
   const [displayName, setDisplayName] = useState("");
+  const [position, setPosition] = useState("");
+  const [personalProfile, setPersonalProfile] = useState("");
+  const [researchGate, setResearchGate] = useState("");
+  const [github, setGithub] = useState("");
   const [linkedin, setLinkedin] = useState("");
   const [googleScholar, setGoogleScholar] = useState("");
   const [address, setAddress] = useState("");
@@ -37,6 +41,10 @@ const Profile = () => {
         const data = await response.json();
         console.log(data.data);
         setUserData(data.data);
+        setPosition(data.position);
+        setPersonalProfile(data.personalProfile);
+        setResearchGate(data.researchGate);
+        setGithub(data.github);
         setLinkedin(data.data.linkedin); // Set the linkedin state here
         setGoogleScholar(data.data.googleScholar); // Set the linkedin state here
         setAddress(data.data.address); // Set the linkedin state here
@@ -78,6 +86,10 @@ const Profile = () => {
               },
               body: JSON.stringify({
                 displayName,
+                position,
+                personalProfile,
+                researchGate,
+                github,
                 linkedin,
                 googleScholar,
                 address,
@@ -189,6 +201,74 @@ const Profile = () => {
                         className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                         onChange={(e) => setImgUpload(e.target.files[0])} // Ensure setImgUpload is accessible here
                         readOnly={!isEditMode}
+                      />
+                    </div>
+                  </div>
+                  <div className="w-full lg:w-12/12 px-4">
+                    <div className="relative w-full mb-3">
+                      <label
+                        className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                        htmlFor="position"
+                      >
+                        Position
+                      </label>
+                      <input
+                        type="text"
+                        className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                        value={position}
+                        readOnly={!isEditMode}
+                        onChange={(e) => setPosition(e.target.value)}
+                      />
+                    </div>
+                  </div>
+                  <div className="w-full lg:w-12/12 px-4">
+                    <div className="relative w-full mb-3">
+                      <label
+                        className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                        htmlFor="linkedin"
+                      >
+                        Personal Profile Link
+                      </label>
+                      <input
+                        type="text"
+                        className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                        value={personalProfile}
+                        readOnly={!isEditMode}
+                        onChange={(e) => setPersonalProfile(e.target.value)}
+                      />
+                    </div>
+                  </div>
+                  <div className="w-full lg:w-12/12 px-4">
+                    <div className="relative w-full mb-3">
+                      <label
+                        className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                        htmlFor="linkedin"
+                      >
+                        Research Gate
+                      </label>
+                      <input
+                        type="text"
+                        className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                        value={researchGate}
+                        readOnly={!isEditMode}
+                        onChange={(e) => setResearchGate(e.target.value)}
+                      />
+                    </div>
+                  </div>
+                  <div className="w-full lg:w-12/12 px-4">
+                    <div className="relative w-full mb-3">
+                      <label
+                        className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                        htmlFor="linkedin"
+                      >
+                        Github
+                      </label>
+                      <input
+                        type="text"
+                        className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                        value={github}
+                        readOnly={!isEditMode}
+                        onChange={(e) => setGithub(e.target.value)}
                       />
                     </div>
                   </div>
