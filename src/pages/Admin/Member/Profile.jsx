@@ -39,12 +39,12 @@ const Profile = () => {
 
       if (response.ok) {
         const data = await response.json();
-        console.log(data.data);
         setUserData(data.data);
-        setPosition(data.position);
-        setPersonalProfile(data.personalProfile);
-        setResearchGate(data.researchGate);
-        setGithub(data.github);
+        setDisplayName(data.data.displayName);
+        setPosition(data.data.position);
+        setPersonalProfile(data.data.personalProfile);
+        setResearchGate(data.data.researchGate);
+        setGithub(data.data.github);
         setLinkedin(data.data.linkedin); // Set the linkedin state here
         setGoogleScholar(data.data.googleScholar); // Set the linkedin state here
         setAddress(data.data.address); // Set the linkedin state here
@@ -78,7 +78,7 @@ const Profile = () => {
 
           // Include the imgUrl in the body of the profile update request
           const response = await fetch(
-            `http://localhost:5000/api/member/updatememberprofile/${email}`,
+            `https://cemrd-online.vercel.app/api/member/updatememberprofile/${email}`,
             {
               method: "PUT",
               headers: {
