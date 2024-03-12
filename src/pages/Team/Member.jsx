@@ -3,6 +3,12 @@ import { BsLinkedin } from "react-icons/bs";
 import { SiGooglescholar } from "react-icons/si";
 import MemberDetails from "./MemberDetails";
 import { Link, useNavigate } from "react-router-dom";
+import {
+  FaFacebookSquare,
+  FaFlask,
+  FaGraduationCap,
+  FaLinkedin,
+} from "react-icons/fa";
 
 const Member = () => {
   const router = useNavigate();
@@ -42,7 +48,7 @@ const Member = () => {
         <div className="grid gap-10 mx-auto sm:grid-cols-2 lg:grid-cols-4 lg:max-w-screen-lg">
           {data?.map((profile) => (
             <div>
-              <div className="relative pb-56 mb-4 rounded shadow lg:pb-64">
+              <div className="relative pb-56 mb-4 rounded shadow lg:pb-64 shadow-lg">
                 <img
                   className="absolute object-cover w-full h-full rounded"
                   src={profile.imgUrl}
@@ -50,30 +56,32 @@ const Member = () => {
                 />
               </div>
               <div className="flex flex-col sm:text-center">
-                <p className="text-lg font-bold">{profile.displayName}</p>
-                <p className="mb-5 text-xs text-gray-800">Research Member</p>
-                <div className="flex items-center space-x-3 sm:justify-center">
-                  <a
-                    href={profile.linkedin}
-                    className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-                    target="blank"
-                  >
-                    <BsLinkedin />
+                <p className="text-xl font-bold">{profile.displayName}</p>
+                <p className="mb-5 text-sm text-gray-800">{profile.position}</p>
+                <div className="flex justify-center pt-2 space-x-4 align-center">
+                  <a href="">
+                    {" "}
+                    <FaFacebookSquare className="text-blue-600" />
                   </a>
-                  <a
-                    href={"googleScholar"}
-                    className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-                    target="blank"
-                  >
-                    <SiGooglescholar />
+                  <a href="">
+                    {" "}
+                    <FaLinkedin className="text-blue-800 ml-4" />
                   </a>
+                  <a href="">
+                    {" "}
+                    <FaGraduationCap className="text-green-600 ml-4" />
+                  </a>
+                  <a href="">
+                    <FaFlask className="text-purple-600 ml-4" />
+                  </a>{" "}
                 </div>
                 <Link
+                  className="mt-3 border font-semibold text-gray-800 hover:text-gray-900 hover:border-gray-950 transition-all"
                   to={`/team/memberdetails?email=${encodeURIComponent(
                     profile.email
                   )}&id=${encodeURIComponent(profile._id)}`}
                 >
-                  Go to Member Details Page
+                  View Details
                 </Link>
               </div>
             </div>
