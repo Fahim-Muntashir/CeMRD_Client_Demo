@@ -128,9 +128,6 @@ const Nav = () => {
         <Navbar.Link href="/">
           <ActiveLink to="/about">About</ActiveLink>
         </Navbar.Link>
-        <Navbar.Link href="/">
-          <ActiveLink to="/events">Events</ActiveLink>{" "}
-        </Navbar.Link>
 
         <Navbar.Link href="/">
           <ActiveLink to="/research">Research</ActiveLink>{" "}

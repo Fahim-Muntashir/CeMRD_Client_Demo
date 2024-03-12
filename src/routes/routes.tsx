@@ -21,7 +21,7 @@ import Research from "../pages/Research/Research";
 import SingleResearch from "../pages/Research/SingleResearch";
 import Blog from "../pages/Blog/Blog";
 import SingleBlog from "../pages/Blog/SingleBlog";
-import Events from "../pages/Event/Events";
+
 import NotFound from "../components/Shared/NotFound";
 import Researches from "../pages/Researches/Researches";
 import News from "../pages/News/News";
@@ -100,9 +100,6 @@ const router = createBrowserRouter([
     }, {
         path: "blog/:id",
         element: <SingleBlog></SingleBlog>
-    }, {
-        path: "events",
-        element: <Events></Events>
     },
     {
         path: "news",

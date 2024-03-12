@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Container from "../../components/Shared/Container";
 import Nav from "../../components/Shared/Nav";
+import Footer from "../../components/Shared/Footer";
 
 const SingleBlog = () => {
   const { id } = useParams();
@@ -89,6 +90,7 @@ const SingleBlog = () => {
           </div>
         </div>
       </Container>
+      <Footer></Footer>
     </div>
   );
 };
