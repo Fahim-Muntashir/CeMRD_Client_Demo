@@ -26,6 +26,7 @@ import NotFound from "../components/Shared/NotFound";
 import Researches from "../pages/Researches/Researches";
 import News from "../pages/News/News";
 import Courses from "../pages/Courses/Courses";
+import SingleNews from "../pages/News/SingleNews";
 
 
 const router = createBrowserRouter([
@@ -104,6 +105,9 @@ const router = createBrowserRouter([
     {
         path: "news",
         element: <News></News>
+    }, {
+        path: "news/:id",
+        element: <SingleNews></SingleNews>
     },
     {
         path: "courses",
