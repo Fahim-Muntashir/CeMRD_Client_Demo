@@ -2,6 +2,13 @@ import { useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import Container from "../../components/Shared/Container";
 import Nav from "../../components/Shared/Nav";
+import {
+  FaFacebookSquare,
+  FaFlask,
+  FaGithub,
+  FaGraduationCap,
+  FaLinkedin,
+} from "react-icons/fa";
 
 function Page() {
   const [researchData, setResearchData] = useState([]);
@@ -91,30 +98,33 @@ function Page() {
                   alt="Person"
                 />
               </div>{" "}
+              <div className="flex justify-center mt-4 pt-2 space-x-4 align-center">
+                <a href={userData.github}>
+                  {" "}
+                  <FaGithub className="text-black-600" />
+                </a>
+                <a href={userData.linkedin} target="blank">
+                  {" "}
+                  <FaLinkedin className="text-blue-800 ml-4" />
+                </a>
+                <a href={userData.googleScholar} target="blank">
+                  {" "}
+                  <FaGraduationCap className="text-green-600 ml-4" />
+                </a>
+                <a href={userData.researchGate} target="blank">
+                  <FaFlask className="text-purple-600 ml-4" />
+                </a>{" "}
+              </div>
             </div>{" "}
-            <div class="mt-10 text-center border-b pb-12">
+            <div class="mt-3 text-center border-b pb-12">
               {" "}
               <h1 class="text-4xl font-medium text-gray-700">
                 {userData.displayName}
               </h1>{" "}
-              <p class="font-light text-gray-600 mt-3"></p>{" "}
+              <p class="font-light text-gray-600 "></p>{" "}
               <p class="mt-8 text-gray-500">{userData.position}</p>{" "}
               <p class="mt-2 text-gray-500">{userData.about}</p>{" "}
             </div>{" "}
-            <div class="mt-12 flex flex-col justify-center">
-              {" "}
-              <p class="text-gray-600 text-center font-light lg:px-16">
-                {userData.about}
-              </p>{" "}
-              <Link
-                to={"https://staywithmoon.com/"}
-                className="text-indigo-500 py-2 px-4 text-center font-medium mt-4"
-                target="blank"
-              >
-                {" "}
-                Visit Website
-              </Link>{" "}
-            </div>
           </div>
         </div>
 

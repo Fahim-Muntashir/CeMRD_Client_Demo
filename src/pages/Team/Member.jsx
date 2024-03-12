@@ -6,6 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import {
   FaFacebookSquare,
   FaFlask,
+  FaGithub,
   FaGraduationCap,
   FaLinkedin,
 } from "react-icons/fa";
@@ -47,8 +48,8 @@ const Member = () => {
         </div>
         <div className="grid gap-10 mx-auto sm:grid-cols-2 lg:grid-cols-4 lg:max-w-screen-lg">
           {data?.map((profile) => (
-            <div>
-              <div className="relative pb-56 mb-4 rounded shadow lg:pb-64 shadow-lg">
+            <div key={profile}>
+              <div className="relative pb-56 mb-4 rounded  lg:pb-64 shadow-lg">
                 <img
                   className="absolute object-cover w-full h-full rounded"
                   src={profile.imgUrl}
@@ -59,24 +60,24 @@ const Member = () => {
                 <p className="text-xl font-bold">{profile.displayName}</p>
                 <p className="mb-5 text-sm text-gray-800">{profile.position}</p>
                 <div className="flex justify-center pt-2 space-x-4 align-center">
-                  <a href="">
+                  <a href={profile.github}>
                     {" "}
-                    <FaFacebookSquare className="text-blue-600" />
+                    <FaGithub className="text-black-600" />
                   </a>
-                  <a href="">
+                  <a href={profile.linkedin} target="blank">
                     {" "}
                     <FaLinkedin className="text-blue-800 ml-4" />
                   </a>
-                  <a href="">
+                  <a href={profile.googleScholar} target="blank">
                     {" "}
                     <FaGraduationCap className="text-green-600 ml-4" />
                   </a>
-                  <a href="">
+                  <a href={profile.researchGate} target="blank">
                     <FaFlask className="text-purple-600 ml-4" />
                   </a>{" "}
                 </div>
                 <Link
-                  className="mt-3 border font-semibold text-gray-800 hover:text-gray-900 hover:border-gray-950 transition-all"
+                  className="mt-3 border font-semibold text-gray-800 hover:text-gray-900 hover:border-gray-950 text-center transition-all"
                   to={`/team/memberdetails?email=${encodeURIComponent(
                     profile.email
                   )}&id=${encodeURIComponent(profile._id)}`}
