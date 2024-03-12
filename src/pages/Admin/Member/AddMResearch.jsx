@@ -17,7 +17,7 @@ const AddMResearch = () => {
 
     // Example URL:
     const apiUrl =
-      "https://cemrd-online.vercel.app/api/memberresearch/postresearch";
+      "https://cemrd-demo-two.vercel.app/api/memberresearch/postresearch";
 
     fetch(apiUrl, {
       method: "POST",

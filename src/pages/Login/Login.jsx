@@ -32,7 +32,7 @@ const Login = () => {
       toast.success("Successfully Sign In!");
       const email = user.user.email;
       const name = user.user.displayName;
-      fetch("https://cemrd-online.vercel.app/api/users/", {
+      fetch("https://cemrd-demo-two.vercel.app/api/users/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

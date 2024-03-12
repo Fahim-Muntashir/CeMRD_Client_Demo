@@ -32,7 +32,7 @@ function Page() {
     const getMemberProfileData = async () => {
       try {
         const response = await fetch(
-          `https://cemrd-online.vercel.app/api/member/findmemberbyemail?email=${email}`
+          `https://cemrd-demo-two.vercel.app/api/member/findmemberbyemail?email=${email}`
         );
 
         if (response.ok) {
@@ -55,7 +55,7 @@ function Page() {
     const getMemberResearch = async () => {
       try {
         const response = await fetch(
-          `https://cemrd-online.vercel.app/api/memberresearch/getresearch/${email}`
+          `https://cemrd-demo-two.vercel.app/api/memberresearch/getresearch/${email}`
         );
 
         if (response.ok) {

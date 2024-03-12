@@ -19,8 +19,8 @@ function ManageUser() {
     queryKey: ["users", searchInput], // Include searchInput in the queryKey
     queryFn: async (query) => {
       const url = query
-        ? `https://cemrd-online.vercel.app/api/users?search=${query}`
-        : "https://cemrd-online.vercel.app/api/users";
+        ? `https://cemrd-demo-two.vercel.app/api/users?search=${query}`
+        : "https://cemrd-demo-two.vercel.app/api/users";
 
       const res = await fetch(url, {
         method: "GET",
@@ -38,7 +38,7 @@ function ManageUser() {
     queryKey: ["users"],
     mutationFn: (id) => {
       return fetch(
-        `https://cemrd-online.vercel.app/api/users/makefaqulty/${id}`,
+        `https://cemrd-demo-two.vercel.app/api/users/makefaqulty/${id}`,
         {
           method: "PATCH",
           headers: {
@@ -56,7 +56,7 @@ function ManageUser() {
     queryKey: ["users"],
     mutationFn: (id) => {
       return fetch(
-        `https://cemrd-online.vercel.app/api/users/deletefaqulty/${id}`,
+        `https://cemrd-demo-two.vercel.app/api/users/deletefaqulty/${id}`,
         {
           method: "PATCH",
           headers: {

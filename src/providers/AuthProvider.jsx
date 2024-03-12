@@ -51,7 +51,7 @@ const AuthProvider = ({ children }) => {
       if (currentUser) {
         axios
           .get(
-            `https://cemrd-online.vercel.app/api/auth/jwt/${currentUser.email}`,
+            `https://cemrd-demo-two.vercel.app/api/auth/jwt/${currentUser.email}`,
             {
               email: currentUser.email,
             }

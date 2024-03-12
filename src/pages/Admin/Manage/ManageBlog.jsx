@@ -5,7 +5,7 @@ const ManageBlog = () => {
     queryKey: ["researches"],
     queryFn: async () => {
       const res = await fetch(
-        "https://cemrd-online.vercel.app/api/blog/allblog",
+        "https://cemrd-demo-two.vercel.app/api/blog/allblog",
         {
           method: "GET",
         }
@@ -18,9 +18,12 @@ const ManageBlog = () => {
   const handleDelete = async (id) => {
     try {
       // Fetch the delete API with the provided id
-      await fetch(`https://cemrd-online.vercel.app/api/blog/deleteblog/${id}`, {
-        method: "DELETE",
-      });
+      await fetch(
+        `https://cemrd-demo-two.vercel.app/api/blog/deleteblog/${id}`,
+        {
+          method: "DELETE",
+        }
+      );
 
       // After deletion, refetch the data to update the UI
       refetch();
@@ -33,7 +36,7 @@ const ManageBlog = () => {
     try {
       // Fetch the mark published API with the provided id
       await fetch(
-        `https://cemrd-online.vercel.app/api/blog/markpublished/${id}`,
+        `https://cemrd-demo-two.vercel.app/api/blog/markpublished/${id}`,
         {
           method: "PUT",
         }

@@ -12,7 +12,7 @@ const AddBlog = () => {
   const handleBlogSubmit = (event) => {
     event.preventDefault();
     // Send user information to your Express server for Blog submission
-    fetch("https://cemrd-online.vercel.app/api/blog/addblog", {
+    fetch("https://cemrd-demo-two.vercel.app/api/blog/addblog", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

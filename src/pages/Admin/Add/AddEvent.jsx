@@ -15,7 +15,7 @@ const AddEvent = () => {
     event.preventDefault();
 
     // Fetch request to add event
-    fetch("https://cemrd-online.vercel.app/api/event/addevent", {
+    fetch("https://cemrd-demo-two.vercel.app/api/event/addevent", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

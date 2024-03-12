@@ -12,7 +12,7 @@ const AddResearch = () => {
   const handleResearchSubmit = (event) => {
     event.preventDefault();
 
-    fetch("https://cemrd-online.vercel.app/api/research/addresearch/", {
+    fetch("https://cemrd-demo-two.vercel.app/api/research/addresearch/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

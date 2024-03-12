@@ -11,7 +11,7 @@ const Blog = () => {
     queryKey: ["researches"],
     queryFn: async () => {
       const res = await fetch(
-        "https://cemrd-online.vercel.app/api/blog/allblog",
+        "https://cemrd-demo-two.vercel.app/api/blog/allblog",
         {
           method: "GET",
         }

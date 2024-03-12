@@ -17,7 +17,7 @@ const Nav = () => {
   const roleCheck = async () => {
     try {
       const response = await fetch(
-        `https://cemrd-online.vercel.app/api/auth/users/role/${user.email}`
+        `https://cemrd-demo-two.vercel.app/api/auth/users/role/${user.email}`
       );
 
       if (response.ok) {

@@ -34,7 +34,7 @@ const Profile = () => {
   const getMemberProfileData = async () => {
     try {
       const response = await fetch(
-        `https://cemrd-online.vercel.app/api/member/findmemberbyemail?email=${email}`
+        `https://cemrd-demo-two.vercel.app/api/member/findmemberbyemail?email=${email}`
       );
 
       if (response.ok) {
@@ -78,7 +78,7 @@ const Profile = () => {
 
           // Include the imgUrl in the body of the profile update request
           const response = await fetch(
-            `https://cemrd-online.vercel.app/api/member/updatememberprofile/${email}`,
+            `https://cemrd-demo-two.vercel.app/api/member/updatememberprofile/${email}`,
             {
               method: "PUT",
               headers: {

@@ -18,7 +18,7 @@ const SingleBlog = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `https://cemrd-online.vercel.app/api/blog/singleblog/${id}`
+          `https://cemrd-demo-two.vercel.app/api/blog/singleblog/${id}`
         );
         const result = await response.json();
         setData(result.data);

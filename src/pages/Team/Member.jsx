@@ -17,7 +17,7 @@ const Member = () => {
     queryKey: ["profiles"],
     queryFn: async () => {
       const res = await fetch(
-        "https://cemrd-online.vercel.app/api/member/allmemberprofile",
+        "https://cemrd-demo-two.vercel.app/api/member/allmemberprofile",
         {
           method: "GET",
         }

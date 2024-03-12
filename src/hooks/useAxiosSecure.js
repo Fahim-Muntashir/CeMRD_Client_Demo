@@ -7,7 +7,7 @@ const useAxiosSecure = () => {
   const { user, logOut } = useAuth();
   const router = useRouter();
   const axiosSecure = axios.create({
-    baseURL: "https://cemrd-online.vercel.app",
+    baseURL: "https://cemrd-demo-two.vercel.app",
   });
 
   useEffect(() => {

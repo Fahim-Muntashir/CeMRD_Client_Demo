@@ -9,7 +9,7 @@ const News = () => {
     queryKey: ["researches"],
     queryFn: async () => {
       const res = await fetch(
-        "https://cemrd-online.vercel.app/api/news/allnews",
+        "https://cemrd-demo-two.vercel.app/api/news/allnews",
         {
           method: "GET",
         }
