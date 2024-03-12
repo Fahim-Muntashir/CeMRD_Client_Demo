@@ -1,4 +1,5 @@
 import Container from "../../components/Shared/Container";
+import { FaLinkedin, FaYoutube } from "react-icons/fa";
 
 const Connect = () => {
   return (
@@ -9,7 +10,11 @@ const Connect = () => {
         </h1>
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-4 lg:gap-8 -z-10">
           <div className="">
-            <a href="/" className="group relative block h-64 sm:h-80 lg:h-96">
+            <a
+              href="https://www.facebook.com/groups/2148952108677508"
+              target="blank"
+              className="group relative block h-64 sm:h-80 lg:h-96"
+            >
               <span className="absolute inset-0 border-2 border-dashed border-primary"></span>
 
               <div className="relative flex h-full transform items-end border-2 border-blue-700 bg-white transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2">
@@ -30,13 +35,13 @@ const Connect = () => {
                   </svg>
 
                   <h2 className="mt-4 text-xl font-medium sm:text-2xl">
-                    CeMRD Global Initiatives
+                    CeMRD Facebook Group
                   </h2>
                 </div>
 
                 <div className="absolute p-4 opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 sm:p-6 lg:p-8">
                   <h3 className="mt-4 text-xl font-medium sm:text-2xl">
-                    Explore CeMRD's global initiatives
+                    Explore CeMRD's FB Group
                   </h3>
 
                   <p className="mt-4 text-sm sm:text-base">
@@ -49,28 +54,21 @@ const Connect = () => {
             </a>
           </div>
           <div className="">
-            <a href="/" className="group relative block h-64 sm:h-80 lg:h-96">
+            <a
+              href="https://www.linkedin.com/company/cemrd/mycompany/"
+              target="blank"
+              className="group relative block h-64 sm:h-80 lg:h-96"
+            >
               <span className="absolute inset-0 border-2 border-dashed border-blue-700"></span>
 
               <div className="- relative flex h-full transform items-end border-2 border-blue-700 bg-white transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2">
                 <div className="p-4 !pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 sm:p-6 lg:p-8">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-10 w-10 sm:h-12 sm:w-12"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
+                  <a href="">
+                    <FaLinkedin className="text-4xl text-blue-600" />
+                  </a>
 
-                  <h2 className="mt-4 text-xl font-medium sm:text-2xl">
-                    CeMRD Community Engagement
+                  <h2 className="mt-4 text-xl font-medium sm:text-2xl ">
+                    CeMRD LinkedIn
                   </h2>
                 </div>
 
@@ -80,9 +78,8 @@ const Connect = () => {
                   </h3>
 
                   <p className="mt-4 text-sm sm:text-base">
-                    Connect with CeMRD's vibrant community, where ideas and
-                    innovations flourish. Join discussions and collaborative
-                    efforts.
+                    Follow CeMRD Linkedin Account to stay uptodate our research
+                    and publication
                   </p>
                 </div>
               </div>
@@ -131,40 +128,30 @@ const Connect = () => {
           </div>
 
           <div className="">
-            <a href="/" className="group relative block h-64 sm:h-80 lg:h-96">
+            <a
+              href="https://www.youtube.com/@MahmudulHasanMoon"
+              target="blank"
+              className="group relative block h-64 sm:h-80 lg:h-96"
+            >
               <span className="absolute inset-0 border-2 border-dashed border-black"></span>
 
               <div className="relative flex h-full transform items-end border-2 border-blue-700 bg-white transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2">
                 <div className="p-4 !pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 sm:p-6 lg:p-8">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-10 w-10 sm:h-12 sm:w-12"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
+                  <FaYoutube className="text-4xl text-red-500"></FaYoutube>
 
                   <h2 className="mt-4 text-xl font-medium sm:text-2xl">
-                    CeMRD Research Insights
+                    CeMRD Youtube
                   </h2>
                 </div>
 
                 <div className="absolute p-4 opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 sm:p-6 lg:p-8">
                   <h3 className="mt-4 text-xl font-medium sm:text-2xl">
-                    Delve into CeMRD's Research Insights
+                    Delve into CeMRD's Research Courses
                   </h3>
 
                   <p className="mt-4 text-sm sm:text-base">
-                    Stay informed with CeMRD's latest research insights,
-                    addressing pressing challenges and contributing to global
-                    understanding.
+                    Stay informed with CeMRD's latest research courses,
+                    addressing pressing challenges and contributing in Youtube
                   </p>
                 </div>
               </div>
